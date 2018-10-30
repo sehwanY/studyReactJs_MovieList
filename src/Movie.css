@@ -1,0 +1,78 @@
+.Movie {
+    background-color: white;
+    min-width: 40%;
+    max-width: 40%;
+    min-height: 300px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 50px;
+    text-overflow: ellipsis;
+    padding: 0 20px;
+    margin: 40px;
+    box-shadow: 0 8px 38px black;
+}
+
+.Movie .Movie__poster {
+    max-width: 100%;
+    position: relative;
+    top: -25px;
+    padding: 5px;
+}
+
+.Movie__poster>img{
+    width: 85%;
+    box-shadow: 0 8px 38px black;
+}
+
+.Movie__Culumns {
+    width:30%;
+    box-sizing:border-box;
+    text-overflow: ellipsis;
+}
+
+.Movie__Culumns:last-child{
+    padding:20px 0;
+    width: 60%;
+}
+
+.Movie h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Movie .Movie__Genres {
+    display: flex;
+    margin-bottom: 20px;   
+    flex-wrap: wrap;
+}
+
+.Movie__Genres > span {
+    margin-right: 10px;
+}
+
+.Movie .Movie__Synopsis {
+    text-overflow: ellipsis;
+    color: darkgray;
+    overflow: hidden;
+}
+
+@media screen and (min-width:320px) and (max-width:667px){
+    .Movie{
+        width:100%;
+    }
+}
+
+@media screen and (min-width:320px) and (max-width:667px) and (orientation: portrait){
+    .Movie{
+        width:100%;
+    }
+    .Movie__poster{
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+    .Movie__Culumns{
+        width:100%!important;
+    }
+}

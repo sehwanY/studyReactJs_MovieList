@@ -1,0 +1,24 @@
+.App {
+  padding: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-size: 14px;
+  align-items: center;
+}
+
+.App--loading {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.App--nav{
+  width: 100%;
+  padding: 50px;
+  font-size: 14px;
+}
