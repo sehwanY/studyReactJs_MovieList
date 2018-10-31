@@ -16,7 +16,7 @@ class App extends Component {
 
   componentWillMount(){
     // console.log("will mount");
-    this._getMovies();
+    this._getMovies(this.state.selected);
   }
 
   componentDidMount(){
@@ -83,11 +83,12 @@ class App extends Component {
 
   // 함수의 이름 앞에 _ 를 사용하는 이유는 React의 기능이 많기 때문에 이를 구분하기 위해서
   // = () => 
+  /* Movie 컴포넌트에 title이라는 이름으로 movie[0] 데이터를 전송 */
+  /* 데이터의 전달은 부모 컴포넌트가 자식 컴포넌트에게 행할 수 있다. */
+  /* patch Array나 foreach 라고 생각하면 편하다. for문의 동작도 합쳐진 느낌 */
+  /* 컴포넌트의 key는 상대적으로 느리다. */
   _renderMovieList = () => {
-    {/* Movie 컴포넌트에 title이라는 이름으로 movie[0] 데이터를 전송 */}
-    {/* 데이터의 전달은 부모 컴포넌트가 자식 컴포넌트에게 행할 수 있다. */}
-    {/* patch Array나 foreach 라고 생각하면 편하다. for문의 동작도 합쳐진 느낌 */}
-    {/* 컴포넌트의 key는 상대적으로 느리다. */}
+    
     const movieList = this.state.movieList.map((movie) => {
       return <Movie 
                 title={movie.title_english} 
